@@ -12,10 +12,10 @@ const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 const appPath = `${path.resolve(__dirname)}`;
 
 // Dev Server
-const proxyUrl = 'dev.boilerplate.com'; // local dev url example: dev.wordpress.com
+const proxyUrl = 'localhost.cresstec:9999'; // local dev url example: dev.wordpress.com
 
 // Theme
-const themeName = 'init_theme_name';
+const themeName = 'cresstec';
 const themePath = `/wp-content/themes/${themeName}/skin`;
 const themeFullPath = `${appPath}${themePath}`;
 const themePublicPath = `${themePath}/public/`;
@@ -150,6 +150,19 @@ module.exports = [
     module: allModules,
 
     plugins: allPlugins,
+
+    resolve: {
+      alias: {
+        TweenLite: path.resolve('node_modules', 'gsap/src/uncompressed/TweenLite.js'),
+        TweenMax: path.resolve('node_modules', 'gsap/src/uncompressed/TweenMax.js'),
+        TimelineLite: path.resolve('node_modules', 'gsap/src/uncompressed/TimelineLite.js'),
+        TimelineMax: path.resolve('node_modules', 'gsap/src/uncompressed/TimelineMax.js'),
+        ScrollMagic: path.resolve('node_modules', 'scrollmagic/scrollmagic/uncompressed/ScrollMagic.js'),
+        flickity: path.resolve('node_modules', 'flickity/dist/flickity.pkgd'),
+        'animation.gsap': path.resolve('node_modules', 'scrollmagic/scrollmagic/uncompressed/plugins/animation.gsap.js'),
+        'debug.addIndicators': path.resolve('node_modules', 'scrollmagic/scrollmagic/uncompressed/plugins/debug.addIndicators.js')
+      },
+    },
 
     devtool: DEV ? '#inline-source-map' : '',
   },

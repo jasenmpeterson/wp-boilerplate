@@ -5,12 +5,12 @@
  * Define global environment variable, and define certain
  * settings based on it.
  *
- * @package init_theme_name
+ * @package cresstec
  *
  * @since 1.0.0
  */
 
-if ( ! defined( 'INF_ENV' ) ) {
+if ( ! defined( 'CRESS_ENV' ) ) {
   return false;
 }
 
@@ -36,7 +36,7 @@ define( 'AUTOMATIC_UPDATER_DISABLED', true );
 define( 'WP_DEBUG', true );
 define( 'WP_DEBUG_LOG', true );
 
-if ( INF_ENV === 'develop' ) {
+if ( CRESS_ENV === 'develop' ) {
   // Enable direct upload from admin.
   define( 'FS_METHOD', 'direct' );
 

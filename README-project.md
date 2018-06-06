@@ -8,7 +8,7 @@ Before you start developing ask a lead developer to export you the latest versio
   * Development is done localy on your computer
   * Create `feature/feature-name` branch from `master` and create pull request to `staging` branch
   ```
-  http://dev.boilerplate.com/
+  http://localhost.cresstec:9999/
   ```
 
 ## Staging server
@@ -61,7 +61,7 @@ And this global variable somewhere before wp-settings and wp-config-project.php.
 ```php
 // Must be set.
 // Possible options are develop, staging and production.
-define( 'INF_ENV', 'develop' );
+define( 'CRESS_ENV', 'develop' );
 ```
 
 ------------------------------------

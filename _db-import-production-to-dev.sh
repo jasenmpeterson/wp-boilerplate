@@ -32,10 +32,10 @@ echo "${BLUE}Database import and search replace in progress...${NC}"
 wp db import latest_dump/db_dump/latest.sql
 
 # Search and replace for URL
-wp search-replace www.boilerplate.com dev.boilerplate.com --url=www.boilerplate.com --all-tables
+wp search-replace www.boilerplate.com localhost.cresstec:9999 --url=www.boilerplate.com --all-tables
 
 # Search and replace for https to http
-wp search-replace https://dev.boilerplate.com http://dev.boilerplate.com --all-tables
+wp search-replace https://localhost.cresstec:9999 http://localhost.cresstec:9999 --all-tables
 
 echo "${BLUE}Flushing cache, removing transients and resetting premalinks!${NC}"
 wp cache flush

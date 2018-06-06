@@ -80,7 +80,7 @@ After running setup script, you'll need to create `wp-config.php`. You can do th
 
 ```sh
 wp config create --dbname={DBNAME} --dbuser={DBUSER} --dbpass={DBPASS}
-wp core install --url={dev.boilerplate.com} --title={THEMENAME} --admin_user={ADMINUSER} --admin_email={ADMINMAIL}
+wp core install --url={localhost.cresstec:9999} --title={THEMENAME} --admin_user={ADMINUSER} --admin_email={ADMINMAIL}
 wp theme activate {THEMENAME}
 ```
 
@@ -125,13 +125,13 @@ alias wpcbf='phpcbf --standard=vendor/infinum/coding-standards-wp/Infinum';
 Checking theme for possible violations:
 
 ```sh
-wpcs wp-content/themes/init_theme_name
+wpcs wp-content/themes/cresstec
 ```
 
 Autofix theme for minor violations:
 
 ```sh
-wpcbf wp-content/themes/init_theme_name
+wpcbf wp-content/themes/cresstec
 ```
 
 ## Build
